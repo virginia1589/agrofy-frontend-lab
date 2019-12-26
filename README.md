@@ -38,7 +38,10 @@ Se creará un canal de **Slack** para que los participantes del curso puedan com
 Los temas que van a darse son los siguientes:
 
 **Week 1:** CSS & HTML
+
 **Week 2:** CSS & HTML 
+
 **Week 3:** JS
+
 **Week 4:** JS & REACT
 
