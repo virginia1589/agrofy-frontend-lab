@@ -1,0 +1,13 @@
+.tags {
+    color: rgb(230, 236, 241);
+    display: block;
+    font-size: 14px;
+    word-break: normal;
+    font-family: "Source Code Pro", Consolas, Menlo, Monaco, Courier, monospace;
+    line-height: 1.4;
+    margin: 32px 0px;
+    padding: 24px 24px 24px 8px;
+    overflow: auto;
+    background: rgb(24, 48, 85);
+    border-radius: 3px;
+}
