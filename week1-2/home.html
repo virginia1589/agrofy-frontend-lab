@@ -7,7 +7,6 @@
   <meta name="author" content="Virginia Calvo">
   <meta name="description" content="This is a page about pokemon.">
 
-
   <title>Pokemon</title>
 </head>
 
@@ -16,6 +15,43 @@
   </header>
   <h1>Pokedex</h1>
   
+  <form> <!--Comienza el formulario-->
+    <fieldset> <!--Opcional para que tenga un recuadro-->
+      <legend>Contact Us</legend> <!--Opcional para un título para el formulario-->
+      
+      <!--Campo de Name-->
+      <p>
+        <label for="camponombre">Name:</label>
+        <input type="text" name="nombre" id="camponombre" placeholder="Name" required>
+      </p> 
+
+      <!--Campo de Email-->
+      <p>
+        <label for="campoemail">Email:</label>
+        <input type="email" name="email" id="campoemail" placeholder="Email" required>
+      </p> 
+
+      <!--Campo de Subject-->
+      <p>
+        <label for="camposubject">Subject:</label>
+        <input type="text" name="subject" id="camposubject" placeholder="Subject" required>
+      </p>
+
+      <!--Campo de Message-->
+      <p>
+        <label for="campomessage">Message:</label>
+        <textarea id="campomessage" name="message" placeholder="Message" rows="4" cols="20" required></textarea>
+      </p>
+      
+      <!--Botón de Send-->
+      <p>
+        <input type="submit" value="Send">
+      </p>
+
+    </fieldset>
+
+
+  </form><!--Termina el formulario-->
 
   <footer>
   </footer>
