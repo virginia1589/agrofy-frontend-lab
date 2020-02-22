@@ -1,5 +1,22 @@
 /* Esto es un comentario*/
 
-p{
+ul li{
+    list-style-type: none;
+    display: inline;
+  }
+
+  a {
+    display: inline-block;
+    background-color: #01413A;
+    padding: 10px;
+    color:white;
+    text-decoration: none;
+  }
+
+  a:hover{
+    background-color: green;
+  }
   
-}
+  a:active{
+    background-color: blue;
+  }
