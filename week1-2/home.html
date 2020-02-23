@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <meta name="author" content="Virginia Calvo">
   <meta name="description" content="This is a page about pokemon.">
-
   <title>Pokemon</title>
 
   <link rel="stylesheet" href="styles/app.css">
@@ -15,7 +13,7 @@
 
 <body>
   <!--Comienza header-->
-  <header class="menu">
+  <header>
     
     <!--Page logo-->
     <div class="logo"> 
@@ -24,8 +22,11 @@
       </a> 
     </div>
 
-   <!--Menu-->
-    <nav>
+    <!--checkbox-->
+    <input type="checkbox" name="" id="btn-menu">
+    <label for="btn-menu"><img src="assets/menu.png" id="imgcheckbox"></label>
+    <!--Menu-->
+    <nav class="menu">
       <ul>
         <li><a href="home.html">Home</a></li> 
         <li><a href="#relleno">Relleno</a></li>
@@ -37,7 +38,6 @@
       </ul> 
       <hr>
     </nav>
-
   <!--Fin header-->
   </header>
   
@@ -47,10 +47,8 @@
   <a href="#history">History</a>
   <!--Hero-->
   </section>
-
   <!--Texto de relleno-->
   <section id="relleno"> 
-
     <h2 >Relleno</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptate autem hic id cum consectetur natus deserunt deleniti laborum eos maiores sequi repellendus, atque minus quia repudiandae similique est. Dolorum!</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptate autem hic id cum consectetur natus deserunt deleniti laborum eos maiores sequi repellendus, atque minus quia repudiandae similique est. Dolorum!</p>
@@ -62,33 +60,29 @@
   
   </section>
   <!--Fin texto de relleno-->
-
   <!--History-->
   <section id="history">
 
     <h2 >History Data</h2>
     <h3>1980 - First steps</h3>
+    <h3 class="subtitulo">1980 - First steps</h3>
     <p>Pokémon is short for “Pocket Monsters", the original Japanese name. The franchise has its roots in a gaming magazine in the early 1980s in Japan—Game Freak, started by Satoshi Tajiri and Ken Sugimori. Tajiri was the writer, while Sugimori was the illustrator.</p>
     <h3>1996 - Game Boy</h3>
+    <h3 class="subtitulo">1996 - Game Boy</h3>
     <p>26 February 1996 marks the debut of the Pokémon franchise in the form of both those games on the Game Boy in Japan. At its heart, Pocket Monsters: Red and Green was a very basic Japanese role-playing game.</p>
     <h3>1998 - Pikachu</h3>
+    <h3 class="subtitulo">1998 - Pikachu</h3>
     <p>The popularity of the anime and Yellow, I believe, led to Pikachu becoming the most recognizable and loved Pokémon out there. Pocket Monsters’ success led to North America getting the games in 1998 for the Game Boy (as Pokémon Red and Blue). These few years in the public saw Pokémon go from a game about a hobby to a worldwide phenomenon.</p>
-  
-  </section>
 
+  </section>
   <!--Video-->
   <section id="video">
-
     <iframe width="560" height="315" src="https://www.youtube.com/embed/D0zYJ1RQ-fs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
   </section>
-
 <!--Comienza el formulario-->
   <section id="form">
     <form > 
-
       <fieldset> <!--Opcional para que tenga un recuadro-->
-
         <legend>Contact Us</legend> <!--Opcional para un título para el formulario-->
         
         <!--Campo de Name-->
@@ -96,19 +90,16 @@
           <label for="camponombre">Name:</label>
           <input type="text" name="nombre" id="camponombre" placeholder="Name" required>
         </p> 
-
         <!--Campo de Email-->
         <p>
           <label for="campoemail">Email:</label>
           <input type="email" name="email" id="campoemail" placeholder="Email" required>
         </p> 
-
         <!--Campo de Subject-->
         <p>
           <label for="camposubject">Subject:</label>
           <input type="text" name="subject" id="camposubject" placeholder="Subject" required>
         </p>
-
         <!--Campo de Message-->
         <p>
           <label for="campomessage">Message:</label>
@@ -119,15 +110,11 @@
         <p>
           <input type="submit" value="Send">
         </p>
-
       </fieldset>
     <!--Termina el formulario-->
     </form>
-
   </section>
-
   <a href="#arriba">Go back up </a>
-
   <footer>
     <div class="redessociales">
       <ul>
@@ -138,5 +125,4 @@
     </div>
   </footer>
 </body>
-
 </html>

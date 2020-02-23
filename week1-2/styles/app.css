@@ -1,36 +1,86 @@
 /* Esto es un comentario*/
 
-ul li{
-    list-style-type: none;
-    display: inline;
-  }
+/*.menu {
+  background-color: greenyellow;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  left: 0%;
+} */
 
-  a {
-    display: inline-block;
-    background-color: #01413A;
-    padding: 10px;
-    color:white;
-    text-decoration: none;
-  }
+iframe{
+  width: 100%;
+  max-width: 500px;
+}
 
-  a:hover{
-    background-color: green;
-  }
+#imgcheckbox {
+  height: 30px;
+}
   
-  a:active{
-    background-color: blue;
+header{
+  width: 100%;
+  background: yellow;
+}
+
+#btn-menu {
+  display: none;
+}
+
+header label {
+  display: none;
+  width:30px;
+  height:30px;
+  padding:10px;
+  border-right: 1px solid #ffffff;
+}
+
+header label:hover{
+  cursor: pointer;
+  background: rgba(0,0,0,0.3);
+}
+
+.menu ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.menu li a {
+  display: block;
+  padding: 15px 20px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.menu li:hover{
+  background: rgba(0,0,0.3);
+}
+
+.menu li {
+  border-right: 1px solid #ffffff;
+}
+
+@media (max-width:768px) {
+  header label {
+    display: block;
+  }
+  .menu {
+    position: absolute;
+    background: yellow;
+    width: 70%;
+    margin-left:-72%;
+    transition: all 0.5s;
+  }
+  .menu ul{
+    flex-direction: column;
+  } 
+
+  .menu li{
+    border-top: 1px solid #ffffff;
   }
 
-  /*.menu {
-    background-color: greenyellow;
-    position: fixed;
-    top: 0%;
-    right: 0%;
-    left: 0%;
-  } */
-
-  iframe{
-    width: 100%;
-    max-width: 500px;
+  #btn-menu:checked ~ .menu {
+    margin: 0;
   }
-  
+}
