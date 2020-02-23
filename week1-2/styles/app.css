@@ -28,4 +28,9 @@ ul li{
     right: 0%;
     left: 0%;
   } */
+
+  iframe{
+    width: 100%;
+    max-width: 500px;
+  }
   
