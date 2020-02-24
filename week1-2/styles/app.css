@@ -219,6 +219,19 @@ header label:hover{
   padding-bottom: 40px;
 }
 
+.youtube a{
+  text-decoration: none;
+  padding-bottom: 15px;
+} 
+
+.youtube .btn-view{
+  background: linear-gradient(90deg, #F00000 0%, #DC281E 100%);
+  border-radius: 100px;
+  padding: 20px 50px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
 .Footer {
   background: #2C1C19;
     width: 100%;
