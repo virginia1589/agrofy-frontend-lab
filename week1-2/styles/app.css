@@ -16,7 +16,7 @@
 
 body{
   font-family:'Open Sans';
-  padding-top: 137px;
+  padding-top: 116px;
 }
 
 iframe{
@@ -43,25 +43,27 @@ header{
   width:192px;
   height:70px;
   float: left;
+  padding: 5px 30px;
 }
+
 .logo img{
     opacity:1;
     width:192px;
     height:70px;
     display:block;
     margin: auto;
-    margin-left: 33px;
-   
+  
     }
 
   .container{
     width: 100%;
-    /* max-width: 1200px; */
-    margin:;
+    max-width: 1170px;
+    margin:auto;
   }
 
-  header.container{
-    display: table;
+  header {
+     display: flex; 
+    
   }
 
 #btn-menu {
@@ -210,11 +212,15 @@ header label:hover{
   } 
 
   .menu li{
-    border-top: 1px solid #ffffff;
+    /* border-top: 1px solid #ffffff; */
   }
 
   #btn-menu:checked ~ .menu {
     margin: 0;
+  }
+
+  .hero{
+    background-position: right;
   }
 
   .hero-content{
