@@ -106,7 +106,7 @@ header label:hover{
   margin-top: 10px;
 }
 
-.menu li:hover{
+.menu li:hover {
   background: #FAC419;
   width: 102px;
   height: 42px;
@@ -137,20 +137,20 @@ header label:hover{
   
 }
 
-.hero-content{
+.hero-content {
    color: #000000;
    
    padding-top: 100px;
   
 }
 
-.hero-content h1{
+.hero-content h1 {
   color: #ffffff;
   font-size: 50px;
   text-transform: uppercase;
 }
 
-.hero-content p{
+.hero-content p {
   color: #000000;
   padding-top: 30px;
   font-weight: bold;
@@ -158,12 +158,12 @@ header label:hover{
   margin-bottom: 70px;
 }
 
-.hero-content a{
+.hero-content a {
   margin-right: 180px;
   text-decoration: none;
 }
 
-.hero-content .btn-view{ 
+.hero-content .btn-view { 
   background: linear-gradient(90deg, #F00000 0%, #DC281E 100%);
   border-radius: 100px;
   padding: 20px 50px;
@@ -172,37 +172,44 @@ header label:hover{
   cursor: pointer;
 }
 
-.history{
+.history {
   display: flex;
   margin: 40px 20px;
 }
 
-.history h2{
+.history h2 {
   text-align: center;
   font-size: 28px;
 }
 
-.video{
+.video {
   width: 100%;
   background-color: #FAC419;
+  
 }
 
-.video > .container{
+.video > .container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.videos{
+.videos {
   width: 100%;
   max-width: 570px;
+  display: flex;
   
 }
 
-.videos iframe{
+.videos iframe {
   width: 100%;
- 
+}
+
+.youtube {
+  text-align: center;
+  padding: 15px 0;
+  max-width: 570px;
 }
 
 .Footer {
