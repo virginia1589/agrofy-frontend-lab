@@ -178,7 +178,9 @@ header label:hover{
 }
 
   .history { 
-  margin: 20px 0px;
+  margin: 0px 0px;
+  height: 470px;
+  display: flex;
   }
 
   .historycontent {
@@ -195,20 +197,25 @@ header label:hover{
 }
 
 .history1{
-    display: flex; 
-    flex-direction: row; 
-    flex-wrap: wrap; 
-    justify-content: center;
-    place-items: center;
-    width: 100%;
-  }
+  display: flex; 
+  flex-direction: row; 
+  flex-wrap: wrap; 
+  justify-content: center;
+  place-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+  
+}
 
 .historyp1{
-  max-width: 90%;
+max-width: 90%;
 }
 
 .year1{
-  padding: 0px 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  display: inline-flex;
+  align-self: center;
 }
 
 .history2{
@@ -218,6 +225,7 @@ header label:hover{
   justify-content: center;
   place-items: center;
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .historyp2{
@@ -226,8 +234,10 @@ order: 1;
 }
 
 .year2{
-  padding: 0px 20px;
+  padding-top: 20px;
   order: 2;
+  display: inline-flex;
+  align-self: center;
 }
 
 .history3{
@@ -237,6 +247,7 @@ order: 1;
   justify-content: center;
   place-items: center;
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .historyp3{
@@ -244,7 +255,8 @@ max-width: 90%;
 }
 
 .year3{
-  padding: 0px 20px;
+  display: inline-flex;
+  align-self: center;
 }
 
 
@@ -274,9 +286,9 @@ background-color: #FAC419;
 
 .youtube {
   text-align: center;
-  padding: 30px 0;
   max-width: 570px;
   margin: auto;
+  padding: 0px 10px 40px 10px;
 }
 
 .youtube h2{
