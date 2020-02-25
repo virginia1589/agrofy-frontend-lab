@@ -172,14 +172,32 @@ header label:hover{
   cursor: pointer;
 }
 
-.history {
-  display: flex;
-  margin: 40px 20px;
+.hero-content .btn-view:hover{
+  background: #F00000;
+  background: linear-gradient(90deg, #B90000 179.8%, #F40D00 279.8%);
 }
+
+  .history { 
+  margin: 20px 0px;
+  }
+
+  .history > .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
 
 .history h2 {
   text-align: center;
   font-size: 28px;
+}
+
+.history1{
+   display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    /* justify-content: center; */
 }
 
 .video {
@@ -231,6 +249,11 @@ header label:hover{
   color: white;
   font-size: 16px;
   cursor: pointer;
+}
+
+.youtube .btn-view:hover{
+  background: #F00000;
+  background: linear-gradient(90deg, #B90000 179.8%, #F40D00 279.8%);
 }
 .Footer {
   background: #2C1C19;
