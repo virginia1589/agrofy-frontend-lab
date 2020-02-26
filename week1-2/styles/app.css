@@ -177,10 +177,8 @@ header label:hover{
   background: linear-gradient(90deg, #B90000 179.8%, #F40D00 279.8%);
 }
 
-  .history { 
-  margin: 0px 0px;
-  height: 470px;
-  display: flex;
+  .history > .container {
+    margin: 30px auto;
   }
 
   .historycontent {
@@ -216,6 +214,11 @@ max-width: 90%;
   padding-top: 20px;
   display: inline-flex;
   align-self: center;
+  color: blue;
+}
+
+.historyp1> h4{
+  color: blue;
 }
 
 .history2{
@@ -238,6 +241,11 @@ order: 1;
   order: 2;
   display: inline-flex;
   align-self: center;
+  color: red;
+}
+
+.historyp2> h4{
+  color: red;
 }
 
 .history3{
@@ -257,6 +265,11 @@ max-width: 90%;
 .year3{
   display: inline-flex;
   align-self: center;
+  color: #FAC419;
+}
+
+.historyp3> h4{
+  color: #FAC419;
 }
 
 
