@@ -1,14 +1,6 @@
-/* Esto es un comentario*/
+/* GENERAL */
 
-/*.menu {
-  background-color: greenyellow;
-  position: fixed;
-  top: 0%;
-  right: 0%;
-  left: 0%;
-} */
-
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -16,13 +8,17 @@
 
 body{
   font-family:'Open Sans';
-  padding-top: 116px;
+}
+  
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin:auto;
 }
 
-/* iframe{ 
-  width: 100%;
-  max-width: 500px;
-}*/
+/* FIN GENERAL */
+
+/* HEADER */
 
 #imgcheckbox {
   height: 30px;
@@ -33,9 +29,13 @@ header{
   left: 0;
   width: 100%;
   height: 116px;
-  background:white;
+  background:transparent;
+  position:fixed;
+  transition: background 0.2s ease-in-out;
+}
 
-    position:fixed;  
+header.scroll {
+  background: white;
 }
 
 
@@ -52,22 +52,14 @@ header{
     height:70px;
     display:block;
     margin: auto;
-  
     }
 
-  .container{
-    width: 100%;
-    max-width: 1170px;
-    margin:auto;
-  }
-
-  header {
-     display: flex; 
-    
+header {
+display: flex;     
   }
 
 #btn-menu {
-  display: none;
+display: none;
 }
 
 header label {
@@ -117,12 +109,17 @@ header label:hover{
 }
 
 .menu li {
-  border-right: 1px solid #ffffff;
+  /* border-right: 1px solid #ffffff; */
 }
+
+/* FIN HEADER */
+
+/* HERO */
 
 .hero {
   width: 100%;
   height: 486px;
+  padding-top: 116px;
   background-image: url(../assets/hero.png);
   background-position: center;
   background-size: cover;
@@ -177,6 +174,15 @@ header label:hover{
   background: linear-gradient(90deg, #B90000 179.8%, #F40D00 279.8%);
 }
 
+/* FIN HERO */
+
+/* HISTORY */
+
+  .history{
+    padding-top: 116px;
+  }
+
+
   .history > .container {
     margin: 30px auto;
   }
@@ -187,7 +193,7 @@ header label:hover{
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    line-height: 150%;
+    line-height: 200%;
   }
 
 .history h2 {
@@ -209,14 +215,15 @@ header label:hover{
   place-items: center;
   width: 100%;
   padding-bottom: 30px;
-  margin-bottom: 30px;
+  margin-top: 30px;
   border-left: 3px solid blue;
   margin-left: 1px;
+  justify-content: space-around;
 
 }
 
 .historyp1{
-max-width: 90%;
+max-width: 80%;
 }
 
 .year1{
@@ -244,17 +251,19 @@ max-width: 90%;
   padding-bottom: 30px;
   border-right: 3px solid red;
   margin-right: 1px;
-  margin-bottom: 30px;
+  justify-content: space-around;
 
 }
 
+
 .historyp2{
-max-width: 90%;
+max-width: 80%;
 order: 1;
 }
 
 .year2{
   padding-top: 20px;
+  padding-bottom: 20px;
   order: 2;
   display: inline-flex;
   align-self: center;
@@ -276,15 +285,18 @@ order: 1;
   place-items: center;
   width: 100%;
   padding-bottom: 30px;
-  margin-left: 1px;
+  margin-left: 1px;;
   border-left: 3px solid #FAC419;
+  justify-content: space-around;
 }
 
 .historyp3{
-max-width: 90%;
+max-width: 80%;
 }
 
 .year3{
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: inline-flex;
   align-self: center;
   color: #FAC419;
@@ -297,10 +309,14 @@ max-width: 90%;
     font-size: 18px;
 }
 
+/* FIN HISTORY */
+
+/* VIDEO */
 
 .video {
 width: 100%;
 background-color: #FAC419;
+padding-top: 116px;
 
 }
 
@@ -353,6 +369,11 @@ background-color: #FAC419;
   background: #F00000;
   background: linear-gradient(90deg, #B90000 179.8%, #F40D00 279.8%);
 }
+
+/* FIN VIDEO */
+
+/* FOOTER */
+
 .Footer {
   background: #2C1C19;
     width: 100%;
@@ -366,30 +387,34 @@ background-color: #FAC419;
   font-size: 12px;
 }
 
-@media (max-width:768px) {
+/* FIN FOOTER */
+
+@media all and (max-width:768px) {
   
 
+  /* HEADER */
   header label {
     display: block;
   }
   .menu {
     position: absolute;
+    top: 116px;
     background: yellow;
     width: 70%;
-    margin-left:-72%;
+    right:-72%;
     transition: all 0.5s;
   }
   .menu ul{
     flex-direction: column;
   } 
 
-  .menu li{
-    /* border-top: 1px solid #ffffff; */
+  #btn-menu:checked ~ .menu {
+    right: 0;
   }
 
-  #btn-menu:checked ~ .menu {
-    margin: 0;
-  }
+  /* FIN HEADER */
+
+  /* HERO */
 
   .hero{
     background-position: right;
@@ -410,6 +435,20 @@ background-color: #FAC419;
     text-align: center;
     margin-right: -30px
   }
+
+  /* FIN HERO */
+
+  /* HISTORY */
+
+.historyp1,.historyp2,.historyp3{
+     max-width: 95%; 
+}
+
+.history1,.history2{
+  margin-bottom: 30px;
+}
+
+/* FIN HISTORY */
 
 }
 
