@@ -65,14 +65,14 @@ display: none;
 header label {
   display: none;
   width:30px;
-  height:30px
+  height:30px;
   padding:  10px;
   border-right: 1px solid #ffffff;
   float: right;
   font-size: 28px;
   margin: 20px;
   cursor: pointer;
-}
+ }
 
 header label:hover{
   cursor: pointer;
