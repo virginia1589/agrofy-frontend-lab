@@ -1,4 +1,4 @@
-getFavs = () => {
+ getFavs = () => {
     let favs = localStorage.getItem("pokefavs");
     if(!favs) {
         localStorage.setItem("pokefavs", "");

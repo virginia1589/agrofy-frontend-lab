@@ -35,14 +35,16 @@ const findFav = id => {
 
 
 
-const displayPokemons = (pokemon) => {
+ displayPokemons = (pokemon) => {
 
     const pokedex = document.getElementById("poke_container");
 
     const pokemonHTMLString = pokemon
         .map(
             (pokeman) => `
-        <li class="card">
+         
+        <div class="card">
+            
             <img class="card-image" src="${pokeman.image}"/>
             <h2 class="card-title">${pokeman.name}</h2>
             <p class="card-subtitle">Type: ${pokeman.type}</p>
@@ -53,14 +55,14 @@ const displayPokemons = (pokemon) => {
                 `<button class="boton-fav add-fav">Add to favs</button>`
             }
             
-        </li>
+        </div> 
     `
         )
         .join('');
     pokedex.innerHTML = pokemonHTMLString;
 };
 
-const fetchPokemon = (promises) => {
+let fetchPokemon = (promises) => {
         
         Promise.all(promises)
         .then(results => {

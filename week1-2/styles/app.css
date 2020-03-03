@@ -8,6 +8,7 @@
 
 body{
   font-family:'Open Sans';
+  background: #f4f4f4;
 }
   
 .container {
@@ -316,7 +317,7 @@ max-width: 80%;
 .video {
 width: 100%;
 background-color: #FAC419;
-padding-top: 116px;
+margin-top: 116px;
 
 }
 
