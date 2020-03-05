@@ -1,10 +1,11 @@
 const addFav = (id) => {
     let favs = localStorage.getItem("pokefavs");
-    if(!favs) {
-        localStorage.setItem("pokefavs", "");
-        favs = localStorage.getItem("pokefavs");
+    if(favs) {
+        favs = favs.split(",");
     }
-    favs = favs.split(",");
+    else {
+        favs = [];
+    }
     favs.push(id);
     localStorage.setItem("pokefavs", favs.toString());
 };
@@ -21,8 +22,7 @@ const removeFav = (id) => {
 const findFav = id => {
     let favs = localStorage.getItem("pokefavs");
     if(!favs) {
-        localStorage.setItem("pokefavs", "");
-        favs = localStorage.getItem("pokefavs");
+        return false;
     }
     favs = favs.split(",");
 
@@ -31,11 +31,10 @@ const findFav = id => {
     return favs.indexOf(id) != -1 ? true : false;
 }
 
+const botonAddFav = `<button class="boton-fav add-fav">Add to favs</button>`;
+const botonRemoveFav = `<button class="boton-fav remove-fav">Remove</button>`;
 
-
-
-
- displayPokemons = (pokemon) => {
+const displayPokemons = (pokemon) => {
 
     const pokedex = document.getElementById("poke_container");
 
@@ -43,17 +42,19 @@ const findFav = id => {
         .map(
             (pokeman) => `
          
-        <div class="card">
+        <div class="card pokemon" id="card" data-id="${pokeman.id}">
             
             <img class="card-image" src="${pokeman.image}"/>
             <h2 class="card-title">${pokeman.name}</h2>
             <p class="card-subtitle">Type: ${pokeman.type}</p>
-            ${ 
-                findFav(pokeman.id) ?
-                `<button class="boton-fav remove-fav">Remove</button>`
-                :
-                `<button class="boton-fav add-fav">Add to favs</button>`
-            }
+            <div class="card-actions">
+                ${ 
+                    findFav(pokeman.id) ?
+                    botonRemoveFav
+                    :
+                    botonAddFav
+                }
+            </div>
             
         </div> 
     `
@@ -62,44 +63,46 @@ const findFav = id => {
     pokedex.innerHTML = pokemonHTMLString;
 };
 
-let fetchPokemon = (promises) => {
+const fetchPokemon = (promises) => {
         
-        Promise.all(promises)
-        .then(results => {
-            const pokemons = results.map((result) => ({
-                name: result.name,
-                image: result.sprites['front_default'],
-                type: result.types.map((type) => type.type.name).join(', '),
-                id: result.id
-            }));
-            displayPokemons(pokemons);
-        })
+    Promise.all(promises)
+    .then(results => {
+        const pokemons = results.map((result) => ({
+            name: result.name,
+            image: result.sprites['front_default'],
+            type: result.types.map((type) => type.type.name).join(', '),
+            id: result.id
+        }));
+        displayPokemons(pokemons);
+    })
 
 };
 
-const getAllPokemon = () => {
+document.addEventListener('click', e => {
 
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=150")
-        .then(response => {
-            return response.json();
-        })
-        .then(list => {
-            const pokemons = list.results;
+    const element = e.target;
 
-            const promises = [];
+    if(element.classList.contains('boton-fav')) {
+        const button = e.target;
+        const buttonsContainer = button.parentNode;
+        const pokemonCard = button.parentNode.parentNode;
+        const id = pokemonCard.dataset.id;
 
-            pokemons.forEach(pokemon => {
-                promises.push(
-                    fetch(pokemon.url).then(res => res.json())
-                );
+        if(findFav(id)) {
+            removeFav(id);
+            buttonsContainer.innerHTML = botonAddFav;
+            const eventRemoveFav = new CustomEvent('removeFav', {
+                detail: {
+                    pokemonCard: pokemonCard
+                }
             });
+            document.dispatchEvent(eventRemoveFav);
+        }
+        else {
+            addFav(id);
+            buttonsContainer.innerHTML = botonRemoveFav;
+        }
 
-            fetchPokemon(promises);
-        })
-        .catch(error => {
-            console.log(error);
-        });
+    }
 
-}
-
-getAllPokemon();
+});

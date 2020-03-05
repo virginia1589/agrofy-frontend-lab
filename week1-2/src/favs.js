@@ -1,8 +1,7 @@
- getFavs = () => {
+const getFavs = () => {
     let favs = localStorage.getItem("pokefavs");
     if(!favs) {
-        localStorage.setItem("pokefavs", "");
-        favs = localStorage.getItem("pokefavs");
+        return false;
     }
 
     favs = favs.split(",");
@@ -27,17 +26,8 @@ const fetchFavs = (favs) => {
 
 }
 
-const fetchPokemon = (promises) => {
-        
-    Promise.all(promises)
-    .then(results => {
-        const pokemons = results.map((result) => ({
-            name: result.name,
-            image: result.sprites['front_default'],
-            type: result.types.map((type) => type.type.name).join(', '),
-            id: result.id
-        }));
-        displayPokemons(pokemons);
-    })
+document.addEventListener('removeFav', e => {
+    e.detail.pokemonCard.remove();
+});
 
-};
+getFavs();

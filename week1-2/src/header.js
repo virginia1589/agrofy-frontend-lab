@@ -10,8 +10,6 @@ window.addEventListener("scroll", () => {
 
     const header = document.getElementsByTagName("header")[0];
 
-    console.log(header);
-
     if(scrollTop > 80) {
         header.classList.add("scroll");
     }
