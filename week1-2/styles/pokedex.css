@@ -192,11 +192,12 @@ body {
   background: linear-gradient(90deg, #B90000 179.8%, #F40D00 279.8%);
 }
 
-.boton-fav .remove-fav{
+.boton-fav.remove-fav{
    background: white;
     color: linear-gradient(90deg, #F00000 0%, #DC281E 100%);
     border: #f00000;
     border-color: #f00000;
+    color: red;
     border: solid;
 }
 

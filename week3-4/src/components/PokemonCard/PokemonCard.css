@@ -1,0 +1,26 @@
+.card {
+	background-color: #eee;
+	border-radius: 20px;
+	box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+	margin: 20px;
+	padding: 20px;
+	text-align: center;
+}
+
+.card .card-image {
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	text-align: center;
+}
+
+.card .card-image img {
+	margin-top: 20px;
+	max-width: 90%;
+}
+
+.card .card-title {
+	margin: 15px 0 7px;
+	letter-spacing: 1px;
+}

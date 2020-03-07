@@ -1,0 +1,22 @@
+.boton{
+    background: linear-gradient(90deg, #F00000 0%, #DC281E 100%); 
+    border-radius: 100px;
+    padding: 14px 30px;
+    color: white; 
+    font-size: 16px;
+    cursor: pointer;
+    border-style: none;
+  }
+  
+  .boton:hover{
+    background: #F00000;
+    background: linear-gradient(90deg, #B90000 179.8%, #F40D00 279.8%);
+  }
+  
+  .boton.remove-fav{
+     background: white;
+      color: linear-gradient(90deg, #F00000 0%, #DC281E 100%);
+      border: #f00000;
+      border-color: #f00000;
+      border: solid;
+  }
