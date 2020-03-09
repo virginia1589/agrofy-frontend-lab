@@ -30,7 +30,7 @@ export const findFav = id => {
 
     id = id.toString();
 
-    return favs.indexOf(id) != -1 ? true : false;
+    return favs.indexOf(id) !== -1 ? true : false;
 }
 
 export const toggleFav = (id) => {
@@ -40,4 +40,15 @@ export const toggleFav = (id) => {
     else {
         addFav(id);
     }
+}
+
+export const listFavs = () => {
+    let favs = localStorage.getItem("pokefavs");
+    if(!favs) {
+        return [];
+    }
+
+    favs = favs.split(",");
+
+    return favs;
 }

@@ -46,3 +46,21 @@ export const getAllPokemon = () => {
         });
 
 }
+
+export const getFavorites = (listIds = []) => {
+
+    const promises = [];
+    listIds.forEach(fav => {
+
+        const url = `${API_BASE}/pokemon/${fav}`;
+        promises.push(
+            fetch(url).then(res => res.json())
+        );
+    });
+
+    return fetchPokemon(promises)
+                .then(pokemonsArray => {
+                    return pokemonsArray;
+                });
+
+}

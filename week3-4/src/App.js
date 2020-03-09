@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 
 const Home = lazy(() => import('./pages/Home/Home'));
 const Pokedex = lazy(() => import('./pages/Pokedex/Pokedex'));
+const Fav =lazy(() => import('./pages/Fav/Fav'));
 
 const App = () => (
   <React.Fragment>
@@ -14,6 +15,7 @@ const App = () => (
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/pokedex" component={Pokedex}/>
+          <Route exact path="/Fav" component={Fav}></Route>
         </Switch>
       </Suspense>
     </Router>

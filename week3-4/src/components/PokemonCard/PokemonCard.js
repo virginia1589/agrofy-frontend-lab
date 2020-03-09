@@ -11,7 +11,7 @@ const PokemonCard = props => {
     return (
         <div className="card pokemon" id="card" data-id={pokemon.id}>
             
-            <img className="card-image" src={pokemon.image}/>
+            <img className="card-image" src={pokemon.image} alt={pokemon.name} />
             <h2 className="card-title">{pokemon.name}</h2>
             <p className="card-subtitle">Type: {pokemon.type}</p>
             <div className="card-actions">
