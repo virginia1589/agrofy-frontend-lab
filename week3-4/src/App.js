@@ -13,11 +13,13 @@ const App = () => (
     <Router>
       <Header />
       <Suspense fallback={<div>Loading...</div>}>
+        <div className="All">
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/pokedex" component={Pokedex}/>
           <Route exact path="/Fav" component={Fav}></Route>
         </Switch>
+        </div>
       </Suspense>
     </Router>
     <Footer/>
