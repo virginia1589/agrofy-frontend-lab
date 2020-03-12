@@ -2,8 +2,12 @@ import React, { useState, useEffect } from 'react';
 import PokemonList from './../../components/PokemonList/PokemonList';
 import { getAllPokemon } from './../../api/pokeapi';
 import { findFav, toggleFav } from '../../modules/favs';
+import Search from '../../components/Search/Search';
+import './Pokedex.css'; 
 
 const usePokedex = () => {
+
+
   const [pokemons, setPokemons] = useState([]); // Array con los pokemon
 
   const [loading, setLoading] = useState(true);
@@ -43,7 +47,7 @@ const usePokedex = () => {
           })
   }, []);
 
-  return [pokemons, loading, error, setPokemons];
+  return [pokemons, loading, error, setPokemons]; 
 }
 
 
@@ -59,11 +63,13 @@ const Pokedex = () => {
       pokemonList[index].isFav = !pokemonList[index].isFav;
 
       setPokemons(pokemonList);
+      
   }
 
   return (
-    <div className="pokedex page">
+    <div className="pokedex-page">
       <h1>Pokedex</h1>
+      <Search/>
       {
         pokeLoading ?
           <p>Loading...</p>

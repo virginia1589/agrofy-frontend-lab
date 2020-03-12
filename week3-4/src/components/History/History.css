@@ -129,6 +129,10 @@ max-width: 80%;
     font-size: 18px;
 }
 
+svg{
+  align-self: center;
+}
+
 @media all and (max-width:768px) {
 
     .historyp1,.historyp2,.historyp3{

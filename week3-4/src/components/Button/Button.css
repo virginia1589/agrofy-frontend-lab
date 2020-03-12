@@ -1,11 +1,12 @@
 .boton{
     background: linear-gradient(90deg, #F00000 0%, #DC281E 100%); 
     border-radius: 100px;
-    padding: 14px 30px;
+    padding: 14px 40px;
     color: white; 
     font-size: 16px;
     cursor: pointer;
     border-style: none;
+    margin: 0px 10px;
   }
   
   .boton:hover{
@@ -20,3 +21,6 @@
       border-color: #f00000;
       border: solid;
   }
+
+  
+ 

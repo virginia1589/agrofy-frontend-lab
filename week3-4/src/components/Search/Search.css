@@ -1,0 +1,28 @@
+.Search{
+
+    text-align: center;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.Search > input{
+    border-radius: 100px;
+    border: solid 1px lightgray;
+    padding: 8px;
+    width: 75%;
+    max-width: 600px;
+    max-height: 40px;
+    height: 100%;
+    align-self: center;
+   
+}
+
+
+@media all and (max-width:768px) {
+.Search > input{
+margin-bottom: 10px;
+}
+}

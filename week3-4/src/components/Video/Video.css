@@ -1,7 +1,8 @@
 .video {
     width: 100%;
-    /* background-color: #FAC419; */
+    background-color: white; 
     margin-top: 40px;
+    overflow: hidden;
     
     }
     
@@ -10,6 +11,8 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
+      /* #FAC419 */
+     
     }
     
     .videos {
@@ -54,3 +57,8 @@
       background: #F00000;
       background: linear-gradient(90deg, #B90000 179.8%, #F40D00 279.8%);
     }
+
+    .video svg{
+      display: block;
+    }
+   

@@ -35,8 +35,8 @@ const Fav = () => {
     }
 
     return (
-        <div className="favs page">
-            <h1>Poke Favs</h1>
+        <div className="favs-page">
+            <h1>My Favs</h1>
 
             { <PokemonList pokemons={pokefavs} handleFav={handleFav}  /> }
         </div>
