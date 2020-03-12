@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
+
+
 const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
 
     const getMenuItems = () => <ul>
         <Link to="/"><li>Home</li></Link>
+        <Link to="/"><li> <a href="#history"></a>History </li> </Link>
+        <Link to="/"><li> <a href="#Video"></a>Videos </li> </Link>
         <Link to="/pokedex"><li>Pokedex</li></Link>
         <Link to="/Fav"><li>Favs</li></Link>
-    </ul>;
+    </ul>; 
 
     return <header className="header">
         <div className="header__logo">

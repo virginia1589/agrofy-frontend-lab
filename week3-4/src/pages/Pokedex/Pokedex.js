@@ -76,11 +76,11 @@ const Pokedex = () => {
           : ''
       }
 
-      { 
+      {/* { 
         !pokeLoading && pokemons.length !== 0 ?
           <p>There aren't Pokemons</p>
           : ''
-      }
+      } */}
 
       {
         error.error ?
