@@ -3,13 +3,17 @@ import './Search.css';
 import Button from '../Button/Button';
 
 
-const Search = () => (
+const Search = (props) => {
 
-    <section  className="Search">
-      <input type="text" placeholder=""></input>
-      <Button>Search</Button>
-    </section>
+    const { value:search, onChange, onClick } = props;
+
+    return (
+      <section  className="Search">
+        <input type="text" placeholder="" value={search} onChange={onChange} />
+        <Button onClick={onClick}>Search</Button>
+      </section>
+    );
   
-);
+};
 
 export default Search;

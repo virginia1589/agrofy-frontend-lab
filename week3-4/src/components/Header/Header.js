@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
+import './../../modules/scrollHeader';
+
 
 
 const Header = () => {
@@ -9,8 +11,8 @@ const Header = () => {
 
     const getMenuItems = () => <ul>
         <Link to="/"><li>Home</li></Link>
-        <Link to="/"><li> <a href="#history"></a>History </li> </Link>
-        <Link to="/"><li> <a href="#Video"></a>Videos </li> </Link>
+        <a href="#history"><li>History</li></a>
+        <a href="#Video"><li>Videos</li></a>
         <Link to="/pokedex"><li>Pokedex</li></Link>
         <Link to="/Fav"><li>Favs</li></Link>
     </ul>; 

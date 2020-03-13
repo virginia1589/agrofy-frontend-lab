@@ -5,5 +5,8 @@
 }
 
 .All{
-  min-height: 100vh;
+  min-height: 100vh;          
+
+    /* Esto es para que el footer este siepre abajo */
+
 }

@@ -7,7 +7,6 @@ import './Pokedex.css';
 
 const usePokedex = () => {
 
-
   const [pokemons, setPokemons] = useState([]); // Array con los pokemon
 
   const [loading, setLoading] = useState(true);
@@ -53,12 +52,22 @@ const usePokedex = () => {
 
 const Pokedex = () => {
 
+  const [search, setSearch] = useState("");
+
+  const [pokeSearched, setPokeSearched] = useState([]);
+  
   const [pokemons, pokeLoading, error, setPokemons] = usePokedex();
 
+  useEffect(() => {
+
+    setPokeSearched(pokemons);
+
+  }, [pokemons])
+  
   const handleFav = (id, index) => {
       toggleFav(id);
 
-      const pokemonList = [...pokemons]
+      const pokemonList = [...pokeSearched]
 
       pokemonList[index].isFav = !pokemonList[index].isFav;
 
@@ -66,32 +75,55 @@ const Pokedex = () => {
       
   }
 
+  const handleSearch = () => {
+    setPokeSearched(searchPokemons(search));
+  }
+
+  const searchPokemons = (text = "") => {
+
+    let pokeList = [...pokemons];
+    if(text.length === 0) {
+      return pokeList;
+    }
+
+    text = text.toLowerCase();
+
+    pokeList = pokeList.filter(pokemon => {
+      const pokemonName = pokemon.name.toLowerCase();
+      const find = pokemonName.indexOf(text);
+      return find !== -1;
+    });
+
+    return pokeList;
+  }
+
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+    setPokeSearched(searchPokemons(e.target.value));
+  }
+
   return (
     <div className="pokedex-page">
       <h1>Pokedex</h1>
-      <Search/>
+      <Search value={search} onChange={handleChange} onClick={handleSearch} />
       {
-        pokeLoading ?
+        pokeLoading &&
           <p>Loading...</p>
-          : ''
       }
 
       { 
-        !pokeLoading && pokemons.length > 0 ?
-          <PokemonList pokemons={pokemons} handleFav={handleFav}  />
-          : ''
+        !pokeLoading &&
+          <PokemonList pokemons={ pokeSearched } handleFav={handleFav}  />
       }
 
-      {/* { 
-        !pokeLoading && pokemons.length !== 0 ?
+      {
+        !pokeLoading && pokeSearched.length === 0 &&
           <p>There aren't Pokemons</p>
-          : ''
-      } */}
+      }
 
       {
-        error.error ?
+        error.error &&
           <p>Opss! We have an error loading the Pokemons</p>
-          : ''
       }
     </div>
   )
